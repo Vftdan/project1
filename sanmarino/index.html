@@ -1,0 +1,44 @@
+﻿<html><head>
+<link href="vdz.css" rel="stylesheet" />
+<link href="imgset.css" rel="stylesheet" />
+<script src="vdz.js"></script>
+<meta charset="UTF-8" />
+<script>
+function onlyshow(h,s){
+console.log(h,s);
+var i,e;
+for(i=0;i<h.length;i++){
+e=document.getElementById(h[i]);
+if(!e.load)VDZ.vdzSet(e);
+e.hide();
+e.save();
+};
+e=document.getElementById(s);
+if(!e.load)VDZ.vdzSet(e);
+e.show();
+e.save();
+}
+</script>
+<style>
+#menu>*{
+display:inline-block;
+}
+body>*{
+overflow:auto;
+}
+img {
+border:1pt solid #aaaaaa;
+width:100%;
+}
+</style>
+</head>
+<body>
+<b><div vdz=" fullwidth dark " id="menu"><div vdz=" hover hpadding " onclick='onlyshow(["tab2"],"tab1")'>Текст</div><div vdz=" hover hpadding " onclick='onlyshow(["tab1"],"tab2")'>Картинка</div></div></b>
+<div vdz=" hpadding fullheight " id="tab1"><div vdz=" fullheight white padding ">
+<b>Сан-Мари́но</b> (итал. San Marino), официальное название на русском языке — Республика Сан-Марино (итал. Serenissima Repubblica di San Marino, дословно Светлейшая Республика Сан-Марино) — одно из самых маленьких государств в мире. Находится в Южной Европе, со всех сторон окружено территорией Италии. В своих нынешних границах Сан-Марино — самое старое государство Европы. Название происходит от имени христианского святого, согласно легенде основавшего государство.
+</div></div>
+<div vdz=" hpadding fullheight hidden " id="tab2"><div vdz=" fullheight white padding ">
+<img src="img1.svg" vdz=" round "></img>
+</div></div>
+</body>
+</html>
