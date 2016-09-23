@@ -1,6 +1,32 @@
-﻿<html><head>
+<html><head>
 <link href="vdz.css" rel="stylesheet" />
 <link href="imgset.css" rel="stylesheet" />
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyByZkk7l-HUZ_nylKJLzydENpADckF4Yts"></script>
+<script type="text/javascript">    try {
+        function gmapsinit() {
+            var latlng = new google.maps.LatLng(43.940482, 12.426685);
+            var settings = {
+                zoom: 15,
+                center: latlng,
+                mapTypeControl: true,
+                mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU },
+                navigationControl: true,
+                navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("mapwrap"), settings);
+        }
+        window.addEventListener("load",gmapsinit,false);
+    } catch (e) { prompt("Error", e) };
+    /*function noXML(s) {
+    var s = s.split(""), i, o = "";
+    for (i = 0; i < s.length; i++) {
+    if (s[i] == "<") { o += "&lt;" } else
+    if (s[i] == ">") { o += "&gt;" } else
+    if (s[i] == "&") { o += "&amp;" } else o += s[i];
+    }; return o
+    }*/
+</script>
 <script src="vdz.js"></script>
 <meta charset="UTF-8" />
 <script>
@@ -8,7 +34,8 @@ function onlyshow(h,s){
 console.log(h,s);
 var i,e;
 for(i=0;i<h.length;i++){
-e=document.getElementById(h[i]);
+    e = document.getElementById(h[i]);
+
 if(!e.load)VDZ.vdzSet(e);
 e.hide();
 e.save();
@@ -30,15 +57,22 @@ img {
 border:1pt solid #aaaaaa;
 width:100%;
 }
+#mapwrap 
+{
+    width:800px; height:500px
+}
 </style>
 </head>
 <body>
-<b><div vdz=" fullwidth dark " id="menu"><div vdz=" hover hpadding " onclick='onlyshow(["tab2"],"tab1")'>Текст</div><div vdz=" hover hpadding " onclick='onlyshow(["tab1"],"tab2")'>Картинка</div></div></b>
+<b><div vdz=" fullwidth dark " id="menu"><div vdz=" hover hpadding " onclick='onlyshow(["tab2","tab3"],"tab1")'>Текст</div><div vdz=" hover hpadding " onclick='onlyshow(["tab1","tab3"],"tab2")'>Картинка</div><div vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2"],"tab3")'>Карта</div></div></b>
 <div vdz=" hpadding fullheight " id="tab1"><div vdz=" fullheight white padding ">
 <b>Сан-Мари́но</b> (итал. San Marino), официальное название на русском языке — Республика Сан-Марино (итал. Serenissima Repubblica di San Marino, дословно Светлейшая Республика Сан-Марино) — одно из самых маленьких государств в мире. Находится в Южной Европе, со всех сторон окружено территорией Италии. В своих нынешних границах Сан-Марино — самое старое государство Европы. Название происходит от имени христианского святого, согласно легенде основавшего государство.
 </div></div>
 <div vdz=" hpadding fullheight hidden " id="tab2"><div vdz=" fullheight white padding ">
 <img src="img1.svg" vdz=" round "></img>
+</div></div>
+<div vdz=" hpadding fullheight hidden " id="tab3"><div vdz=" fullheight white padding ">
+<div id="mapwrap"></div>
 </div></div>
 </body>
 </html>
