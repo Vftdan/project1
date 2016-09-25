@@ -73,6 +73,8 @@ el.VDZadd=VDZadd;
 el.VDZrem=VDZrem;
 el.show=show;
 el.hide=hide;
+el.choose=choose;
+el.unchoose=unchoose;
 el.save=function(){
 el.setAttribute("vdz",el.VDZtype+"/ "+el.VDZprops.join(" ")+" /"+el.VDZsubtype)
 };
