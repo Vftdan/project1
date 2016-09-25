@@ -46,6 +46,21 @@ if(!e.load)VDZ.vdzSet(e);
 e.show();
 e.save();
 }
+function onlychoose(h,s){
+console.log(h,s);
+var i,e;
+for(i=0;i<h.length;i++){
+    e = document.getElementById(h[i]);
+
+if(!e.load)VDZ.vdzSet(e);
+e.unchoose();
+e.save();
+};
+e=document.getElementById(s);
+if(!e.load)VDZ.vdzSet(e);
+e.choose();
+e.save();
+}
 </script>
 <style>
 #menu>*{
@@ -66,7 +81,7 @@ width:100%;
 </style>
 </head>
 <body>
-<b><div vdz=" fullwidth dark " id="menu"><div vdz=" hover hpadding " onclick='onlyshow(["tab2","tab3"],"tab1")'>Текст</div><div vdz=" hover hpadding " onclick='onlyshow(["tab1","tab3"],"tab2")'>Картинка</div><div vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2"],"tab3")'>Карта</div></div></b>
+<b><div vdz=" fullwidth dark " id="menu"><div id="menutab1" vdz=" hover hpadding :chosen " onclick='onlyshow(["tab2","tab3","tab4"],"tab1");onlychoose(["menutab2","menutab3","menutab4"],"menutab1")'>Текст</div><div id="menutab2" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab3","tab4"],"tab2");onlychoose(["menutab1","menutab3","menutab4"],"menutab2")'>Картинка</div><div id="menutab3" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab4"],"tab3");onlychoose(["menutab1","menutab2","menutab4"],"menutab3")'>Карта</div><div id="menutab4" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab3"],"tab4");onlychoose(["menutab1","menutab2","menutab3"],"menutab4")'>Опрос</div></div></b>
 <div vdz=" hpadding fullheight " id="tab1"><div vdz=" fullheight white padding ">
 <b>Сан-Мари́но</b> (итал. San Marino), официальное название на русском языке — Республика Сан-Марино (итал. Serenissima Repubblica di San Marino, дословно Светлейшая Республика Сан-Марино) — одно из самых маленьких государств в мире. Находится в Южной Европе, со всех сторон окружено территорией Италии. В своих нынешних границах Сан-Марино — самое старое государство Европы. Название происходит от имени христианского святого, согласно легенде основавшего государство.
 </div></div>
@@ -75,6 +90,36 @@ width:100%;
 </div></div>
 <div vdz=" hpadding fullheight hidden " id="tab3"><div vdz=" fullheight white padding ">
 <div id="mapwrap" vdz=" fullwidth "></div><!--button onclick='chcenter(0,0)'>qwe</button-->
+</div></div>
+<div vdz=" hpadding fullheight hidden " id="tab4"><div vdz=" fullheight white padding ">
+<div vdz="quiz/o">
+<div vdz="quiz/q">
+Вопрос 1
+</div>
+<div vdz="quiz/a">
+Вариант1
+</div>
+<div vdz="quiz/a">
+Вариант2
+</div>
+<div vdz="quiz/a">
+Вариант3
+</div>
+</div>
+<div vdz="quiz/ dark /o">
+<div vdz="quiz/q">
+Вопрос 2
+</div>
+<div vdz="quiz/a">
+Вариант1
+</div>
+<div vdz="quiz/a">
+Вариант2
+</div>
+<div vdz="quiz/a">
+Вариант3
+</div>
+</div>
 </div></div>
 </body>
 </html>

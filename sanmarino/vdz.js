@@ -58,6 +58,15 @@ var show=function(){
   VDZrem("hidden")
   
 }
+var choose=function(){
+  VDZadd(":chosen")
+  
+}
+var unchoose=function(){
+  VDZrem(":chosen")
+  
+}
+
 
 el.VDZcontains=VDZcontains;
 el.VDZadd=VDZadd;
