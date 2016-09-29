@@ -27,6 +27,34 @@ background:rgba(0,0,0,0.6);
 [vdz~="win"],[vdz~="tile"],[vdz~="padding"]{
   padding:1em;
 }
+[vdz~="bwrap"]{
+vertical-align:top;
+display:inline-block;
+}
+
+[vdz~="button"],[vdz~="reset"]{
+border:1pt solid #7f7f7f;
+border-bottom-width:0.2em;
+font-weight:600;
+background:transparent;
+box-shadow:0pt 1.5pt 4pt -0.3pt black;
+outline:none;
+transition:border 0.2s,top 0.2s;
+padding:1ex;
+border-radius:1pt;
+color:inherit;
+}
+[vdz~="button"]:active,[vdz~="reset"]:active{
+top:0.157em;
+border:1pt solid #7f7f7f;
+border-top-width:0.2em;
+border-bottom-width:1 pt;
+box-shadow:0pt 1.5pt 4pt -0.3pt black inset;
+transition:border 0.4s,top 0.4s;
+}
+[vdz~="reset"]{
+color:red;
+}
 [vdz~="hpadding"]{
 padding:0em 1em;
 }
@@ -88,6 +116,14 @@ transition:color 0.7s;
 
 [vdz~="dark"]{
 background:#101010;
+color:white;
+}
+/*[vdz~="dark"][vdz~="button"],[vdz~="dark"]>[vdz~="button"],[vdz~="dark"] *:not([vdz~="white"]):not([vdz~="bwhite"]) [vdz~="reset"]{
+color:white;
+background-color:#aa5555;
+}*/
+[vdz~="dark"][vdz~="reset"],[vdz~="dark"]>[vdz~="reset"],[vdz~="dark"] *:not([vdz~="white"]):not([vdz~="bwhite"]) [vdz~="reset"]{
+background-color:#aa5555;
 color:white;
 }
 [vdz~="fullwidth"]{

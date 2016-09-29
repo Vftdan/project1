@@ -1,6 +1,6 @@
 <html><head>
 <link href="vdz.css" rel="stylesheet" />
-<link href="imgset.css" rel="stylesheet" />
+<!--link href="imgset.css" rel="stylesheet" /-->
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyByZkk7l-HUZ_nylKJLzydENpADckF4Yts"></script>
 <script type="text/javascript">    try {
         function gmapsinit() {
@@ -75,8 +75,7 @@ width:100%;
 }
 #mapwrap 
 {
-    height:500px
-;
+    height:500px;
 }
 </style>
 </head>
@@ -92,21 +91,22 @@ width:100%;
 <div id="mapwrap" vdz=" fullwidth "></div><!--button onclick='chcenter(0,0)'>qwe</button-->
 </div></div>
 <div vdz=" hpadding fullheight hidden " id="tab4"><div vdz=" fullheight white padding ">
+<form>
 <div vdz="quiz/o">
 <div vdz="quiz/q">
 Вопрос 1
 </div>
-<div vdz="quiz/a">
-Вариант1
+<label vdz="quiz/a">
+<input type="radio" name="q2" value="a1" />Вариант1
+</label>
+<label vdz="quiz/a">
+<input type="radio" name="q2" value="a2" />Вариант2
+</label>
+<label vdz="quiz/a">
+<input type="radio" name="q2" value="a3" />Вариант3
+</label>
 </div>
-<div vdz="quiz/a">
-Вариант2
-</div>
-<div vdz="quiz/a">
-Вариант3
-</div>
-</div>
-<div vdz="quiz/ dark /o">
+<div vdz="quiz/o">
 <div vdz="quiz/q">
 Вопрос 2
 </div>
@@ -119,7 +119,11 @@ width:100%;
 <label vdz="quiz/a">
 <input type="radio" name="q2" value="a3" />Вариант3
 </label>
-</div>
+</div><br />
+<div vdz=" bwrap "><input type="submit" value="Отправить" vdz=" button "></input></div>
+<div vdz=" bwrap "><input type="reset" value="Сброс" vdz=" reset "></input></div>
+
+</form>
 </div></div>
 </body>
 </html>
