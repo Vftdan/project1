@@ -62,6 +62,23 @@ e.choose();
 e.save();
 }
 </script>
+<script>
+    var checkanswers = (function () {
+        var correct = { q1: "a1", q2: "a2" };
+        return function (e) {
+            e.preventDefault();
+            var i, j, b = 0, r;
+            for (i in correct) {
+                r = document.getElementsByName(i);
+                for (j = 0; j < r.length; j++) {
+                    b += (r[j].value == correct[i]) && (r[j].checked);
+                }
+            }
+
+            alert("Правильных ответов: "+b);
+        }
+    })()
+</script>
 <style>
 #menu>*{
 display:inline-block;
@@ -91,7 +108,7 @@ width:100%;
 <div id="mapwrap" vdz=" fullwidth "></div><!--button onclick='chcenter(0,0)'>qwe</button-->
 </div></div>
 <div vdz=" hpadding fullheight hidden " id="tab4"><div vdz=" fullheight white padding ">
-<form>
+<form onsubmit="checkanswers(event)">
 <div vdz="quiz/o">
 <div vdz="quiz/q">
 Вопрос 1

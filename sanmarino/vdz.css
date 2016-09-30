@@ -39,7 +39,7 @@ font-weight:600;
 background:transparent;
 box-shadow:0pt 1.5pt 4pt -0.3pt black;
 outline:none;
-transition:border 0.2s,top 0.2s;
+transition:border-bottom 0.4s,top 0.2s;
 padding:1ex;
 border-radius:1pt;
 color:inherit;
@@ -72,7 +72,7 @@ padding:1em 0em;
  border-radius-bottom-left:1ex;
  border-radius-bottom-right:1ex; 
 }
-[vdz~="hover"]:hover,[vdz~="hover>"]>*:hover,[vdz~="hover>1"]>*:first-child:hover,[vdz^="quiz/"][vdz$="/a"]:hover{
+[vdz~="button"]:hover,[vdz~="reset"]:hover,[vdz~="hover"]:hover,[vdz~="hover>"]>*:hover,[vdz~="hover>1"]>*:first-child:hover,[vdz^="quiz/"][vdz$="/a"]:hover{
 background:rgba(127,127,127,0.26);
 transition:0.3s;
 }
@@ -125,6 +125,11 @@ background-color:#aa5555;
 [vdz~="dark"][vdz~="reset"],[vdz~="dark"]>[vdz~="reset"],[vdz~="dark"] *:not([vdz~="white"]):not([vdz~="bwhite"]) [vdz~="reset"]{
 background-color:#aa5555;
 color:white;
+}
+[vdz~="dark"][vdz~="reset"]:hover,[vdz~="dark"]>[vdz~="reset"]:hover,[vdz~="dark"] *:not([vdz~="white"]):not([vdz~="bwhite"]) [vdz~="reset"]:hover{
+background-color:#888888;
+color:#ee1111;
+transition:0.4s;
 }
 [vdz~="fullwidth"]{
 width:100%;
