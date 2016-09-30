@@ -16,13 +16,13 @@ right:0px;
 z-index:4;
 background:rgba(0,0,0,0.6);
 }
-[vdz~="win"]{
-  z-index:5;
-  position:fixed;
-}
 [vdz~="outset"]{
   box-shadow:0pt 1.5pt 4pt -0.3pt black;
   z-index:2;
+}
+[vdz~="win"]{
+  z-index:5;
+  position:fixed;
 }
 [vdz~="win"],[vdz~="tile"],[vdz~="padding"]{
   padding:1em;

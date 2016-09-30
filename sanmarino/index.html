@@ -74,8 +74,8 @@ e.save();
                     b += (r[j].value == correct[i]) && (r[j].checked);
                 }
             }
-
-            alert("Правильных ответов: "+b);
+            onlyshow([], "message");
+            document.getElementById("message").innerHTML = "Правильных ответов: " + b;
         }
     })()
 </script>
@@ -97,6 +97,7 @@ width:100%;
 </style>
 </head>
 <body>
+<div vdz=" win outset white round hidden " id="message" style="right:0px"></div>
 <b><div vdz=" fullwidth dark " id="menu"><div id="menutab1" vdz=" hover hpadding :chosen " onclick='onlyshow(["tab2","tab3","tab4"],"tab1");onlychoose(["menutab2","menutab3","menutab4"],"menutab1")'>Текст</div><div id="menutab2" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab3","tab4"],"tab2");onlychoose(["menutab1","menutab3","menutab4"],"menutab2")'>Картинка</div><div id="menutab3" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab4"],"tab3");onlychoose(["menutab1","menutab2","menutab4"],"menutab3")'>Карта</div><div id="menutab4" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab3"],"tab4");onlychoose(["menutab1","menutab2","menutab3"],"menutab4")'>Опрос</div></div></b>
 <div vdz=" hpadding fullheight " id="tab1"><div vdz=" fullheight white padding ">
 <b>Сан-Мари́но</b> (итал. San Marino), официальное название на русском языке — Республика Сан-Марино (итал. Serenissima Repubblica di San Marino, дословно Светлейшая Республика Сан-Марино) — одно из самых маленьких государств в мире. Находится в Южной Европе, со всех сторон окружено территорией Италии. В своих нынешних границах Сан-Марино — самое старое государство Европы. Название происходит от имени христианского святого, согласно легенде основавшего государство.
@@ -141,6 +142,9 @@ width:100%;
 <div vdz=" bwrap "><input type="reset" value="Сброс" vdz=" reset "></input></div>
 
 </form>
+
+
+</div>
 </div></div>
 </body>
 </html>
