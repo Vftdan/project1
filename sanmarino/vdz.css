@@ -33,6 +33,7 @@ display:inline-block;
 }
 
 [vdz~="button"],[vdz~="reset"]{
+font-size:inherit;
 border:1pt solid #7f7f7f;
 border-bottom-width:0.2em;
 font-weight:600;
