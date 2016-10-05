@@ -66,6 +66,7 @@ e.save();
 </script>
 <script>
     var checkanswers = (function () {
+        var to;
         var correct = { q1: "a1", q2: "a2" };
         return function (e) {
             e.preventDefault();
@@ -76,9 +77,10 @@ e.save();
                     b += (r[j].value == correct[i]) && (r[j].checked);
                 }
             }
+            if(to){clearTimeout(to)};
             onlyshow([], "message");
             document.getElementById("message").innerHTML = "Правильных ответов: " + b;
-            setTimeout(onlyshow.bind(window,["message"],""),5000)
+            to=setTimeout(onlyshow.bind(window,["message"],""),5000)
         }
     })()
 </script>
