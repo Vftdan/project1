@@ -94,6 +94,33 @@ background-size:100%;
 position:relative;
 top:0.125em;
 }
+[vdz^="win/"][vdz$="/bar"]{
+background-color:rgba(127,127,127,0.1);
+position:relative;
+bottom:1ex;
+//left:-1ex;
+height:12pt;
+//padding-top:1pt;
+width:calc(100%+2ex);
+}
+[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/button"],[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/close"]{
+padding:1pt;
+border-left:1pt solid #888888;
+height:1em;
+width:1em;
+font-size:10pt;
+float:right;
+text-align:center;
+}
+[vdz^="win/"][vdz$="/close"]{
+color:#aa5555;
+}
+[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/button"]:active,[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/close"]:active{
+border-top:0.2em solid rgba(0,0,0,0.5);
+box-shadow:0pt 1.5pt 4pt -0.3pt black inset;
+height:0.8em;
+transition:0.5s;
+}
 [vdz^="quiz/"][vdz$="/o"]{
 padding:1ex;
 padding-bottom:0px;
