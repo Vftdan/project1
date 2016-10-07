@@ -1,9 +1,9 @@
 <html><head>
 <link href="vdz.css" rel="stylesheet" />
 <!--link href="imgset.css" rel="stylesheet" /-->
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?callback=gmapsInit&key=AIzaSyByZkk7l-HUZ_nylKJLzydENpADckF4Yts" async></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?callback=gmapsinit&key=AIzaSyByZkk7l-HUZ_nylKJLzydENpADckF4Yts" async></script>
 <script type="text/javascript">    try {
-        function gmapsInit() {
+        function gmapsinit() {
             var latlng = new google.maps.LatLng(43.940482, 12.426685);
             var settings = {
                 zoom: 15,
@@ -17,7 +17,7 @@
             var map = new google.maps.Map(document.getElementById("mapwrap"), settings);
             window.chcenter = function (N, E) { map.setCenter(new google.maps.LatLng(N, E));};
         }
-        //window.addEventListener("load",gmapsinit,false);
+        window.addEventListener("load",gmapsinit,false);
     } catch (e) { prompt("Error", e) };
     /*function noXML(s) {
     var s = s.split(""), i, o = "";
