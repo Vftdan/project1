@@ -32,7 +32,8 @@ gmid=0;
 <script src="vdz.js"></script>
 <meta charset="UTF-8" />
 <script>
-function onlyshow(h,s){
+window.addEventListener("load",function(){
+window.onlyshow=function(h,s){
 console.log(h,s);
 var i,e;
 for(i=0;i<h.length;i++){
@@ -48,7 +49,7 @@ if(!e.load)VDZ.vdzSet(e);
 e.show();
 e.save();
 }
-function onlychoose(h,s){
+window.onlychoose=function(h,s){
 console.log(h,s);
 var i,e;
 for(i=0;i<h.length;i++){
