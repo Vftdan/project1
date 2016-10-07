@@ -80,7 +80,7 @@ e.save();
                     }else{
                             f=true;
                 for (j = 0; j < r.length; j++) {
-                    f = f&&((correct[i].indexOf(r[j].value) == -1 ) ^^ (r[j].checked));
+                    f = f&&((correct[i].indexOf(r[j].value) == -1 ) ^ (r[j].checked));
                 }
                             b+=f;
                     }
