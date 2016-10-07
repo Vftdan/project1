@@ -67,15 +67,23 @@ e.save();
 <script>
     var checkanswers = (function () {
         var to;
-        var correct = { q1: "a1", q2: "a2" };
+        var correct = { q1: "a1", q2: "a2", q3: ["a1","a3"] };
         return function (e) {
             e.preventDefault();
-            var i, j, b = 0, r;
+            var i, j, b = 0, r, f;
             for (i in correct) {
                 r = document.getElementsByName(i);
+                    if(r[0].type=="radio"){
                 for (j = 0; j < r.length; j++) {
                     b += (r[j].value == correct[i]) && (r[j].checked);
                 }
+                    }else{
+                            f=true;
+                for (j = 0; j < r.length; j++) {
+                    f = f&&((correct[i].indexOf(r[j].value) == -1 ) ^^ (r[j].checked));
+                }
+                            b+=f;
+                    }
             }
             if(to){clearTimeout(to)};
             onlyshow([], "message");
@@ -150,6 +158,20 @@ width:100%;
 </label>
 <label vdz="quiz/a">
 <input type="radio" name="q2" value="a3" />Вариант3
+</label>
+</div>   
+<div vdz="quiz/o">
+<div vdz="quiz/q">
+Вопрос 3
+</div>
+<label vdz="quiz/a">
+<input type="checkbox" name="q3" value="a1" />Вариант1
+</label>
+<label vdz="quiz/a">
+<input type="checkbox" name="q3" value="a2" />Вариант2
+</label>
+<label vdz="quiz/a">
+<input type="checkbox" name="q3" value="a3" />Вариант3
 </label>
 </div><br />
 <div vdz=" bwrap "><input type="submit" value="Отправить" vdz=" button "></input></div>
