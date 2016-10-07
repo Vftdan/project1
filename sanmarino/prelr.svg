@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="120pt" height="120pt" viewBox="0 0 120 120"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by Vftdan
+</metadata>
+<g transform="translate(60,60)" stroke="#ff0000" fill="none" stroke-width="10">
+<path d="M -40 0 A 40 40 0 1 1 40 0"  >
+
+<animateTransform 
+    attributeName="transform" 
+           attributeType="XML"
+           type="rotate"
+           from="0"
+           to="360" 
+           dur="4s"
+    repeatCount="indefinite"
+    fill="freeze" 
+     />
+</path>
+
+<path d="M -40 0 A 40 40 0 0 0 40 0" stroke="#ff0000" >
+
+<animateTransform 
+    attributeName="transform" 
+           attributeType="XML"
+           type="rotate"
+           from="0"
+           to="360" 
+           dur="1s"
+    repeatCount="indefinite"
+    fill="freeze" 
+     />
+</path>
+
+<path d="M -45 0 A 45 45 0 0 0 0 45" stroke="rgba(127,255,0,.5)"  >
+
+<animateTransform 
+    attributeName="transform" 
+           attributeType="XML"
+           type="rotate"
+           from="0"
+           to="-360" 
+           dur="2s"
+    repeatCount="indefinite"
+    fill="freeze" 
+     />
+</path>
+</g>
+</svg>
