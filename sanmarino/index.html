@@ -84,9 +84,10 @@ e.save();
                 }
                             b+=f;
                     }else if(r[0].type=="text"){
-                            a=r[j].value;
+                            a=r[0].value;
                             if(correct[i][1]&1) a*=1;
                             b+=(correct[i][0]==a);
+                            break;
                     }
             }
             if(to){clearTimeout(to)};
