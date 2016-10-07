@@ -33,6 +33,7 @@ display:inline-block;
 }
 
 [vdz~="button"],[vdz~="reset"]{
+ cursor:pointer;
 font-size:inherit;
 border:1pt solid #7f7f7f;
 border-bottom-width:0.2em;
@@ -104,6 +105,7 @@ height:12pt;
 width:calc(100%+2ex);
 }
 [vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/button"],[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/close"]{
+  cursor:pointer;
 padding:1pt;
 border-left:1pt solid #888888;
 height:1em;
