@@ -8,7 +8,7 @@
 Created by Vftdan
 </metadata>
 <g transform="translate(60,60)" stroke="#ff0000" fill="none" stroke-width="10">
-<path d="M -40 0 A 40 40 0 1 1 40 0"  >
+<path d="M -40 0 A 40 40 0 1 1 28.28 28.28"  >
 
 <animateTransform 
     attributeName="transform" 
@@ -22,7 +22,7 @@ Created by Vftdan
      />
 </path>
 
-<path d="M -40 0 A 40 40 0 0 0 28.28 -28.28" stroke="#ff0000" >
+<path d="M -40 0 A 40 40 0 0 0 40 0" stroke="#ff0000" >
 
 <animateTransform 
     attributeName="transform" 
