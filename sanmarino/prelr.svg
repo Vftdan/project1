@@ -22,7 +22,7 @@ Created by Vftdan
      />
 </path>
 
-<path d="M -40 0 A 40 40 0 0 0 28.28 28.28" stroke="#ff0000" >
+<path d="M -40 0 A 40 40 0 0 0 28.28 -28.28" stroke="#ff0000" >
 
 <animateTransform 
     attributeName="transform" 
