@@ -100,13 +100,13 @@ background-color:rgba(127,127,127,0.1);
 position:relative;
 bottom:1ex;
 //left:-1ex;
-height:12pt;
+height:1.1ex;
 //padding-top:1pt;
 width:calc(100%+2ex);
 }
 [vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/button"],[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/close"]{
   cursor:pointer;
-padding:1pt;
+padding:0.1ex;
 border-left:1pt solid #888888;
 height:1em;
 width:1em;
