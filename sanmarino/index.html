@@ -20,13 +20,14 @@ gmid=0;
 		window.crmarker=function(N,E,info){var m=new google.maps.Marker({
     position: new google.maps.LatLng(N,E),
     map: map
-  });markers.push([m,N,E]);
+  });
 				var w=new google.maps.InfoWindow({
     content: '<p>' + info + '</p>'
   });	
 						   var mopen= function() {
     w.open(map, m);
   };
+						   markers.push([m,N,E,mopen]);
 						   m.mopen=mopen;
 						   google.maps.event.addListener(m, 'click', mopen);
 						   
@@ -35,7 +36,7 @@ gmid=0;
 		window.openmarker=function(i){
 			var mp=markers[i];
 			openmap(mp[1],mp[2]);
-			mp[0].mopen();
+			mp[3]();
 		}
             window.chcenter = function (N, E) { map.setCenter(new google.maps.LatLng(N, E));};
         }
