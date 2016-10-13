@@ -32,13 +32,18 @@ gmid=0;
 						   google.maps.event.addListener(m, 'click', mopen);
 						   
 						   return markers.length-1;}
-		crmarker(43.9317434,12.4515016,"Монте-Титано");
 		window.openmarker=function(i){
 			var mp=markers[i];
 			openmap(mp[1],mp[2]);
 			mp[3]();
 		}
             window.chcenter = function (N, E) { map.setCenter(new google.maps.LatLng(N, E));};
+		
+		
+		crmarker(43.9317434,12.4515016,"Монте-Титано");
+		crmarker(43.9352609,12.4497812,"Гуаита");
+		crmarker(43.9326308,12.451599,"Честа");
+		crmarker(43.9299994,12.4527187,"Монтале");
         }
       //  window.addEventListener("load",gmapsinit,false);
     } catch (e) { prompt("Error", e) };
@@ -203,7 +208,7 @@ background-size:2em;
 <b><div vdz=" fullwidth dark " id="menu"><div id="menutab1" vdz=" hover hpadding :chosen " onclick='onlyshow(["tab2","tab3","tab4"],"tab1");onlychoose(["menutab2","menutab3","menutab4"],"menutab1")'>Текст</div><div id="menutab2" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab3","tab4"],"tab2");onlychoose(["menutab1","menutab3","menutab4"],"menutab2")'>Картинка</div><div id="menutab3" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab4"],"tab3");onlychoose(["menutab1","menutab2","menutab4"],"menutab3");if(!gmid)gmapsInit();gmid=1'>Карта</div><div id="menutab4" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab3"],"tab4");onlychoose(["menutab1","menutab2","menutab3"],"menutab4")'>Викторина</div></div></b>
 <div vdz=" hpadding fullheight " id="tab1"><div vdz=" fullheight white padding ">
 <b>Сан-Мари́но</b> (итал. San Marino), официальное название на русском языке — Республика Сан-Марино (итал. Serenissima Repubblica di San Marino, дословно Светлейшая Республика Сан-Марино) — одно из самых маленьких государств в мире. Находится в Южной Европе, со всех сторон окружено территорией Италии. В своих нынешних границах Сан-Марино — самое старое государство Европы. Название происходит от имени христианского святого, согласно легенде основавшего государство.<br />
-<a oldhref='javascript:openmap(43.9317434,12.4515016)' href='javascript:openmarker(0)'>Монте-Титано</a> — высочайшая точка Сан-Марино, сложена известняками. Гора имеет три вершины, на каждой из которой построена башня — <a href='javascript:openmap(43.9352609,12.4497812)'>Гуаита</a>, <a href='javascript:openmap(43.9326308,12.451599)'>Честа</a> и <a href='javascript:openmap(43.9299994,12.4527187)'>Монтале</a>, входящих в комплекс Трёх башен Сан-Марино.<br />
+<a href='javascript:openmarker(0)'>Монте-Титано</a> — высочайшая точка Сан-Марино, сложена известняками. Гора имеет три вершины, на каждой из которой построена башня — <a href='javascript:openmarker(1)'>Гуаита</a>, <a href='javascript:openmarker(2)'>Честа</a> и <a href='javascript:openmarker(3)'>Монтале</a>, входящих в комплекс Трёх башен Сан-Марино.<br />
 В Сан-Марино существует республиканская форма правления. Главами государства являются два капитана-регента, назначаемые Большим Генеральным советом. Капитаны-регенты избираются на срок 6 месяцев, с 1 апреля до 1 октября и с 1 октября до 1 апреля каждого года. Они выполняют функции главы государства и осуществляют исполнительную власть. Большой Генеральный Совет является парламентом Республики, он состоит из 60 депутатов, избираемых всеобщим голосованием по системе пропорционального представительства сроком на 5 лет. Аренго, или ассамблея глав семейств, в древности было верховным органом, в настоящее время аренго сохранило за собой право модифицировать Статуты Республики и «право петиции». Это последнее право используется и в наши дни — капитаны-регенты получают многочисленные прошения, предоставляемые гражданами в первое воскресенье после 1-го апреля и после 1-го октября. Поданные прошения в обязательном порядке должны быть рассмотрены в течение 6 месяцев.<br />
 
 </div></div>
