@@ -112,7 +112,7 @@ width:calc(100% + 1.8ex);
   cursor:pointer;
 padding:0.1ex;
 border-left:1pt solid #888888;
-height:90%;
+height:91%;
 width:1em;
 font-size:0.5em;
 float:right;
@@ -125,7 +125,7 @@ color:#aa5555;
 [vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/button"]:active,[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/close"]:active{
 border-top:0.2em solid rgba(0,0,0,0.5);
 box-shadow:0pt 1.5pt 4pt -0.3pt black inset;
-height:1.6ex;
+height:calc(91% - 0.2em);
 transition:0.5s;
 }
 [vdz^="quiz/"][vdz$="/o"]{
