@@ -88,6 +88,9 @@ background:rgba(127,127,127,0.5);
 [vdz~="bwhite"]{
   background:white;
 }
+[vdz~="grey"]{
+  background:#cccccc;
+}
 [vdz^="strimg/"]{
 display:inline-block;
 height:1em;
