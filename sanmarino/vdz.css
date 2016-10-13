@@ -103,10 +103,10 @@ top:0.125em;
 background-color:rgba(127,127,127,0.1);
 position:relative;
 bottom:1ex;
-left:-1ex;
+left:-0.9ex;
 height:1.1ex;
 //padding-top:1pt;
-width:calc(100% + 2ex);
+width:calc(100% + 1.8ex);
 }
 [vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/button"],[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/close"]{
   cursor:pointer;
@@ -117,6 +117,7 @@ width:1em;
 font-size:0.5em;
 float:right;
 text-align:center;
+  overflow:hidden;
 }
 [vdz^="win/"][vdz$="/close"]{
 color:#aa5555;
