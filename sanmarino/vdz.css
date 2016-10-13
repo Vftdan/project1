@@ -108,7 +108,7 @@ width:calc(100%+2ex);
   cursor:pointer;
 padding:0.1ex;
 border-left:1pt solid #888888;
-height:1em;
+height:calc(100%-0.1ex);
 width:1em;
 font-size:10pt;
 float:right;
