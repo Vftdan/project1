@@ -71,7 +71,7 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false)
 <script>
     var checkanswers = (function () {
         var to;
-        var correct = { q1: "a1", q2: "a2", q3: ["a1","a3"], q4: [4,1] };
+        var correct = { q1: "a2", q2: [60,1]/*, q3: ["a1","a3"], q4: [4,1]*/ };
         return function (e) {
             e.preventDefault();
             var i, j, b = 0, r, f, a;
@@ -206,20 +206,25 @@ background-size:2em;
 <form onsubmit="checkanswers(event)">
 <div vdz="quiz/o">
 <div vdz="quiz/q">
-Вопрос 1
+Кто является главой государства в Сан-Марино?
 </div>
 <label vdz="quiz/a">
-<input type="radio" name="q1" value="a1" />Вариант1
+<input type="radio" name="q1" value="a1" />Президент
 </label>
 <label vdz="quiz/a">
-<input type="radio" name="q1" value="a2" />Вариант2
-</label>
-<label vdz="quiz/a">
-<input type="radio" name="q1" value="a3" />Вариант3
-</label>
+<input type="radio" name="q1" value="a2" />Капитаны-регенты
 </div>
+	<div vdz="quiz/o">
+<div vdz="quiz/q">
+Из какого количества депутатов состоит Большой Генеральный Совет?
+</div>
+<label vdz="quiz/a">
+Из <input type="text" name="q2" style="width:2.5em" />
+</label>
+</div><!--
 <div vdz="quiz/o">
 <div vdz="quiz/q">
+	
 Вопрос 2
 </div>
 <label vdz="quiz/a">
@@ -245,15 +250,8 @@ background-size:2em;
 <label vdz="quiz/a">
 <input type="checkbox" name="q3" value="a3" />Вариант3
 </label>
-</div>  
-<div vdz="quiz/o">
-<div vdz="quiz/q">
-Вопрос 4
-</div>
-<label vdz="quiz/a">
-2+2=<input type="text" name="q4" value="5" style="width:2.5em" />
-</label>
-</div><br />
+</div>  -->
+<br />
 <div vdz=" bwrap "><input type="submit" value="Отправить" vdz=" button "></input></div>
 <div vdz=" bwrap "><input type="reset" value="Сброс" vdz=" reset "></input></div>
 
