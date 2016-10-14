@@ -37,9 +37,9 @@ gmid=0;
 		
 		
 		crmarker(43.9317434,12.4515016,"<img src='img3.jpg'></img>Монте-Титано");
-		crmarker(43.9352609,12.4498812,"<img src='img4.jpg'></img>Гуаита");
-		crmarker(43.9326308,12.451699,"<img src='img5.jpg'></img>Честа");
-		crmarker(43.9299994,12.4528187,"<img src='img6.jpg'></img>Монтале");
+		crmarker(43.935301,12.12.449705,"<img src='img4.jpg'></img>Гуаита");
+		crmarker(43.932679,12.451783,"<img src='img5.jpg'></img>Честа");
+		crmarker(43.930081,12.452751,"<img src='img6.jpg'></img>Монтале");
         }
       //  window.addEventListener("load",gmapsinit,false);
     } catch (e) { prompt("Error", e) };
