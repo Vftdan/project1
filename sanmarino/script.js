@@ -51,10 +51,9 @@ gmid=0;
     if (s[i] == "&") { o += "&amp;" } else o += s[i];
     }; return o
     }*/
-</script>
-<script src="vdz.js"></script>
-<meta charset="UTF-8" />
-<script>
+
+
+
 
 window.onlyshow=function(h,s){
 console.log(h,s);
