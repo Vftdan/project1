@@ -1,0 +1,66 @@
+@charset UTF-8
+body {
+font-size:0.7cm;
+}
+[type="radio"],[type="checkbox"]{
+height:1.4em;
+width:1.4em;
+}
+[type="text"],[type="password"]{
+    font-size: 1em;
+    vertical-align: middle;
+    border: 1px solid #888888;
+    border-radius: 2pt;
+    background: rgba(255,255,255,0.5);
+    outline:none;
+}
+#menu>*{
+display:inline-block;
+padding-top:3pt;
+transition:0.6s;
+}
+@media (max-device-width: 12cm) {
+body {
+font-size:1.1cm;
+}
+#menu>*{
+letter-spacing:-0.15ex;
+padding:0.6ex 1em;
+}
+}
+#menu:hover>*{
+padding:1ex 1em;
+}
+body>*{
+overflow:auto;
+}
+img {
+border:1pt solid #aaaaaa;
+width:100%;
+}
+#mapwrap 
+{
+    height:500px;
+}
+#loading{
+background-image:url("prelh.svg");
+background-position:center;
+background-repeat:no-repeat;
+background-size:60%;
+}
+	a[href]{
+		color:#797979;
+		transition:0.2s;
+	}
+	a[href]:hover{
+		color:#dcdcdc;
+	}
+	a[href]:active{
+		color:#353535;
+	}
+@media (orientation:portrait) {
+#loading{
+background-image:url("prelr.svg");
+background-size:2em;
+}
+}
