@@ -92,7 +92,7 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
 
  var checkanswers = (function () {
         var to;
-        var correct = { q1: "a2", q2: [60,1]/*, q3: ["a1","a3"], q4: [4,1]*/ };
+        var correct = { q1: "a2", q2: [60,1], q3: ["a2","a4","a5"]/*, q4: [4,1]*/ };
         return function (e) {
             e.preventDefault();
             var i, j, b = 0, r, f, a;
