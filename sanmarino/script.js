@@ -112,7 +112,7 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
                             a=r[0].value;
                             if(correct[i][1]&1) a*=1;
                             b+=(correct[i][0]==a);
-                            break;
+                            continue;
                     }
             }
             if(to){clearTimeout(to)};
