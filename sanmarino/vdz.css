@@ -145,7 +145,6 @@ background:rgba(150,150,150,0.05);
 color:#55aa55;
 transition:color 0.7s;
 }
-
 [vdz~="dark"]{
 background:#101010;
 color:white;
@@ -165,7 +164,6 @@ width:100%;
 [vdz~="fullheight"]{
 min-height:100%;
 }
-
 [vdz~="col"]{
 height:100%;
 border:0pt solid #999999;
@@ -173,10 +171,8 @@ display:inline-block;
 float:left;
 }
 [vdz~="col"]:not(:first-child){
-
 border-left-width:1pt;
-
 }
 [vdz~="hidden"]{
- display:none !important; 
+display:none !important; 
 }
