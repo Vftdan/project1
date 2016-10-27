@@ -1,11 +1,11 @@
 @charset "UTF-8";
 *{
-  margin:0px;
-  padding:0px;
+margin:0px;
+padding:0px;
 }
 body{
-  font-family:Helvetica,sans-serif;
-  background:rgba(0,0,0,0.08);
+font-family:Helvetica,sans-serif;
+background:rgba(0,0,0,0.08);
 }
 [vdz~="overlay"]{
 position:fixed;
@@ -17,24 +17,23 @@ z-index:4;
 background:rgba(0,0,0,0.6);
 }
 [vdz~="outset"]{
-  box-shadow:0pt 1.5pt 4pt -0.3pt black;
-  z-index:2;
+box-shadow:0pt 1.5pt 4pt -0.3pt black;
+z-index:2;
 }
 [vdz~="win"]{
-  z-index:5;
-  position:fixed;
+z-index:5;
+position:fixed;
 }
 [vdz~="win"],[vdz~="tile"],[vdz~="padding"]{
-  padding:1em;
+padding:1em;
 }
 [vdz~="bwrap"]{
 vertical-align:top;
 display:inline-block;
 }
-
 [vdz~="button"],[vdz~="reset"]{
 -webkit-appearance: none;
- cursor:pointer;
+cursor:pointer;
 font-size:inherit;
 border:1pt solid #7f7f7f;
 border-bottom-width:0.2em;
@@ -68,12 +67,12 @@ padding:1em 0em;
  border-radius:1ex; 
 }
 [vdz~="uround"]{
- border-radius-top-left:1ex;
- border-radius-top-right:1ex; 
+border-radius-top-left:1ex;
+border-radius-top-right:1ex; 
 }
 [vdz~="bround"]{
- border-radius-bottom-left:1ex;
- border-radius-bottom-right:1ex; 
+border-radius-bottom-left:1ex;
+border-radius-bottom-right:1ex; 
 }
 [vdz~="button"]:hover,[vdz~="reset"]:hover,[vdz~="hover"]:hover,[vdz~="hover>"]>*:hover,[vdz~="hover>1"]>*:first-child:hover,[vdz^="quiz/"][vdz$="/a"]:hover{
 background:rgba(127,127,127,0.26);
@@ -83,13 +82,13 @@ transition:0.3s;
 background:rgba(127,127,127,0.5);
 }
 [vdz~="white"]{
-  background:#fefefe;
+background:#fefefe;
 }
 [vdz~="bwhite"]{
-  background:white;
+background:white;
 }
 [vdz~="grey"]{
-  background:#cccccc;
+background:#cccccc;
 }
 [vdz^="strimg/"]{
 display:inline-block;
@@ -105,11 +104,10 @@ position:relative;
 bottom:1ex;
 left:-0.9ex;
 height:1.1ex;
-//padding-top:1pt;
 width:calc(100% + 1.8ex);
 }
 [vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/button"],[vdz^="win/"][vdz$="/bar"]>[vdz^="win/"][vdz$="/close"]{
-  cursor:pointer;
+cursor:pointer;
 padding:0.1ex;
 border-left:1pt solid #888888;
 height:91%;
@@ -117,7 +115,7 @@ width:1em;
 font-size:0.5em;
 float:right;
 text-align:center;
-  overflow:hidden;
+overflow:hidden;
 }
 [vdz^="win/"][vdz$="/close"]{
 color:#aa5555;
@@ -132,15 +130,13 @@ transition:0.5s;
 padding:1ex;
 padding-bottom:0px;
 display:inline-block;
-  vertical-align:top;
-//padding-right:0px;
+vertical-align:top;
 }
 [vdz^="quiz/"][vdz$="/q"]{
 font-weight:bold;
 letter-spacing:0.3ex;
 }
 [vdz^="quiz/"][vdz$="/a"]{
-//margin-left:1em;
 display:block;
 padding:0.5ex;
 background:rgba(150,150,150,0.05);
@@ -154,10 +150,6 @@ transition:color 0.7s;
 background:#101010;
 color:white;
 }
-/*[vdz~="dark"][vdz~="button"],[vdz~="dark"]>[vdz~="button"],[vdz~="dark"] *:not([vdz~="white"]):not([vdz~="bwhite"]) [vdz~="reset"]{
-color:white;
-background-color:#aa5555;
-}*/
 [vdz~="dark"][vdz~="reset"],[vdz~="dark"]>[vdz~="reset"],[vdz~="dark"] *:not([vdz~="white"]):not([vdz~="bwhite"]) [vdz~="reset"]{
 background-color:#aa5555;
 color:white;
