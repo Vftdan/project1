@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1000pt" height="800pt" viewBox="0 0 1000 800"
+ preserveAspectRatio="xMidYMid meet">
+<polygon points="0 306 1000 306 1000 0 0 0" fill="rgba(127,127,255,1)" />
+<polygon points="0 306 1000 306 1000 800 0 800" fill="rgba(127,150,10,1)" />
+
+<defs><linearGradient id="lg1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(200,250,255);stop-opacity:0" />
+      <stop offset="62%" style="stop-color:rgb(200,250,255);stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:rgb(200,250,255);stop-opacity:0" />
+    </linearGradient>
+
+<linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:0" />
+      <stop offset="50%" style="stop-color:rgb(0,0,0);stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0" />
+    </linearGradient>
+    <linearGradient id="lg3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(150,150,150);stop-opacity:0.9" />
+      
+      <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.9" />
+    </linearGradient>
+    </defs>
+<rect x='0' y='0' height='800' width='1000' fill="url('#lg1')" />
+
+
+<circle cx='620' cy='100' r='50' fill="#ffff55" />
+<path d="M 317 489 v -91.25 a 45.625 36.5 0 0 1 91.25 0 v 91.25 Z" fill="rgba(254,255,0,1)" /><path d="M 317 489 v -91.25 a 45.625 36.5 0 0 1 91.25 0 v 91.25 Z" fill="url(#lg2)" /> 
+<path d="M 442 364 v -28.875 a 14.375 11.5 0 0 1 28.875 0 v 28.875 Z" fill="rgba(251,254,0,1)" /><path d="M 442 364 v -28.875 a 14.375 11.5 0 0 1 28.875 0 v 28.875 Z" fill="url(#lg2)" /> 
+<path d="M 634 753 v -223.625 a 111.75 89.5 0 0 1 223.625 0 v 223.625 Z" fill="rgba(252,254,0,1)" /><path d="M 634 753 v -223.625 a 111.75 89.5 0 0 1 223.625 0 v 223.625 Z" fill="url(#lg2)" /> 
+<path d="M 626 369 v -31.625 a 15.75 12.625 0 0 1 31.625 0 v 31.625 Z" fill="rgba(253,254,0,1)" /><path d="M 626 369 v -31.625 a 15.75 12.625 0 0 1 31.625 0 v 31.625 Z" fill="url(#lg2)" />
+
+ <path d="M 76 136 v -35.375 a 70.75 70.75 0 0 1 141.375 0 a 88.375 88.375 0 0 1 176.75 0 a 53 53 0 0 1 106.125 0 v 35.375 Z" fill="url(#lg3)" /> 
+<path d="M 641 221 v -17.625 a 35.375 35.375 0 0 1 70.75 0 a 44.25 44.25 0 0 1 88.375 0 a 26.5 26.5 0 0 1 53 0 v 17.625 Z" fill="url(#lg3)" /> 
+<path d="M 620 186 v -25 a 50 50 0 0 1 100 0 a 62.5 62.5 0 0 1 125 0 a 37.5 37.5 0 0 1 75 0 v 25 Z" fill="url(#lg3)" /> 
+
+
+</svg>
