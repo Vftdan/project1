@@ -1,0 +1,89 @@
+﻿<div id="cont"></div>
+<script src="3d.js"></script>
+<script defer>
+  //  window.onload = function () {
+        var Center = [50, 50];
+        var Scale = [45, 45];
+        var off = 50;
+        var h = 200, w = 500;
+        var svg = "";
+        var qual = 100;
+        svg += "<svg width='" + w + "' height='" + h + "'>\n";
+        svg += "<rect  width='" + w + "' height='" + h + "' style='fill:rgb(63,127,255);' />\n";
+        function rotp(p, a) {
+            return Point(p.x * Math.cos(a) + p.y * Math.sin(a), -p.x * Math.sin(a) + p.y * Math.cos(a))
+        }
+        function movp(p, m) {
+            return Point(p.x + m[0], p.y + m[1])
+        }
+
+        function transToScr(p) {
+            return Point(Math.round((p.x * Scale[0] + Center[0]) * qual) / qual, Math.round((-p.y * Scale[1] + Center[1]) * qual) / qual);
+        }
+
+        function genPath(ps, z) {
+            var i;
+            var P = "<path stroke='rgba(255,127,0,0.9)' stroke-width='2' fill='rgba(127,255,0,0.3)' d='";
+            var l = "M "
+            for (i = 0; i < ps.length; i++) {
+
+                P += l + ps[i];
+                l = " L ";
+            }
+            if (z) P += " z";
+            P += "' />\n";
+            return P;
+        }
+
+        function raw(s) {
+            var a = s.split('');
+            var i;
+            for (i = 0; i < a.length; i++) {
+                if (a[i] == '<') { a[i] = "&lt;" };
+                if (a[i] == '>') { a[i] = "&gt;" };
+                if (a[i] == '&') { a[i] = "&amp;" };
+            }
+            return a.join('');
+        }
+
+        //genPath([Point(1,2),Point(2,3),Point(3,4)]);
+        var figs = [function () {
+            var a = [], i;
+            for (i = 0; i < 6.29; i += 0.001) {
+                a.push(transToScr(Point(Math.sin(i * 2), Math.cos(i * 3))));
+            }
+            return genPath(a, 1);
+        }, function () {
+            var a = [], i;
+            for (i = 0; i < 6.29; i += 0.001) {
+                a.push(transToScr(Point(Math.sin(i * 7), Math.cos(i * 5))));
+            }
+            return genPath(a, 1);
+        }, function () {
+            var a = [], b = [], i;
+            for (i = -3; i <= 3; i += 0.1) {
+                a.push(transToScr(movp(Point(i / 9, i * i / 9), [0, -1])));
+            }
+            for (i = -3; i <= 3; i += 0.1) {
+                a.push(transToScr(movp(rotp(Point(i / 9, i * i / 9), 3.14159), [0, 1])));
+            }
+            for (i = -3; i <= 3; i += 0.1) {
+                b.push(transToScr(movp(rotp(Point(i / 9, i * i / 9), 1.57), [-1, 0])));
+            }
+            for (i = -3; i <= 3; i += 0.1) {
+                b.push(transToScr(movp(rotp(Point(i / 9, i * i / 9), 4.71), [1, 0])));
+            }
+            return genPath(a, 1) + genPath(b, 1);
+        }
+];
+
+        for (i = 0; i < 10; i++) {
+            Center = [(i % 5) * off * 2 + off, (i - i % 5) * off / 2.5 + off];
+
+            svg += figs[i % (figs.length)]();
+        }
+
+        svg += "</svg>\n";
+        document.getElementById("cont").innerHTML += svg + "<pre>" + raw(svg) + "</pre>";
+  //  }
+</script>
