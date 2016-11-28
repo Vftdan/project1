@@ -188,3 +188,17 @@ border-left-width:1pt;
 [vdz~="hidden"]{
  display:none !important; 
 }
+[vdz^="footer/"][vdz$="/root"] {
+width:100%;
+text-align:center;
+}
+[vdz^="footer/"][vdz$="/lih"] {
+font-weight:bold;
+}
+[vdz^="footer/"][vdz$="/lih"]:after {
+display:inline;
+content:":";
+}
+
+
+
