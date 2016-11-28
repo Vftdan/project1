@@ -191,6 +191,7 @@ border-left-width:1pt;
 [vdz^="footer/"][vdz$="/root"] {
 width:100%;
 text-align:center;
+margin:1em;
 }
 [vdz^="footer/"][vdz$="/lih"] {
 font-weight:bold;
