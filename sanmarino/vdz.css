@@ -194,10 +194,14 @@ text-align:center;
 }
 [vdz^="footer/"][vdz$="/lih"] {
 font-weight:bold;
+display:block;
 }
 [vdz^="footer/"][vdz$="/lih"]:after {
 display:inline;
 content:":";
+}
+[vdz^="footer/"][vdz$="/lie"] {
+display:block;
 }
 
 
