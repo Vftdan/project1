@@ -125,3 +125,8 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
   ////////////////////////////////////////////////////
   
   
+var gal;
+window.addEventListener("load",function(){
+gal=VDZ.Gal.create(["img1.svg","img2.svg","img3.jpg","img4.jpg","img5.jpg","img6.jpg"]);
+gal.deploy(document.getElementById("gal_cont"));
+},false);

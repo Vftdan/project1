@@ -1,33 +1,45 @@
-<html><head>
+<html sitever="1.1"><head>
 <link href="vdz.css" rel="stylesheet" />
 <link href="style.css" rel="stylesheet" />
+<link rel="icon" 
+      type="image/gif" 
+      href="favicon.gif"
+id="icon" />
+<script src="vdz.js"></script>
+<script type="text/javascript" src="favicon.js" defer></script>
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyByZkk7l-HUZ_nylKJLzydENpADckF4Yts&callback=gmapsInit" defer></script>
 <script type="text/javascript" src="script.js">   </script>
-<script src="//vftdan.github.io/project1/sanmarino/content.js" defer></script>
-<script src="vdz.js"></script>
+<script src="content.js" defer></script>
+        
 <meta charset="UTF-8" />
+
+<title>Сан-Марино</title>
 </head>
 <body>
-<div id="loading" vdz=" overlay "></div>
+<div id="loading" vdz=" overlay "><noscript><h1><center style="color:red">Для работы сайта необходим JavaScript</center></h1></noscript></div>
 <div vdz=" win outset white round hidden " id="message" style="right:1em;top:1em">
 <div vdz="win/bar"><div vdz="win/close" onclick='onlyshow(["message"],"")'>X</div></div>
 <div></div></div>
 <b><div vdz=" fullwidth dark " id="menu"><div id="menutab1" vdz=" hover hpadding :chosen " onclick='onlyshow(["tab2","tab3","tab4"],"tab1");onlychoose(["menutab2","menutab3","menutab4"],"menutab1")'>Текст</div><div id="menutab2" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab3","tab4"],"tab2");onlychoose(["menutab1","menutab3","menutab4"],"menutab2")'>Картинки</div><div id="menutab3" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab4"],"tab3");onlychoose(["menutab1","menutab2","menutab4"],"menutab3");window.open("#map","_self");if(!gmid)gmapsInit();gmid=1'>Карта</div><div id="menutab4" vdz=" hover hpadding " onclick='onlyshow(["tab1","tab2","tab3"],"tab4");onlychoose(["menutab1","menutab2","menutab3"],"menutab4")'>Викторина</div></div></b>
 <div vdz=" hpadding fullheight " id="tab1"><div vdz=" fullheight white padding ">
+
+
 </div></div>
+
 <div vdz=" hpadding fullheight hidden " id="tab2"><div vdz=" fullheight white padding ">
 <div vdz=" tile dark round ">
-<img src="img1.svg" vdz=" bwhite round "></img><b style="position:relative;top:0.5em">Флаг</b></div><br />
+<img src="img1.svg" vdz=" bwhite round " onclick="gal.open(0)"></img><b style="position:relative;top:0.5em">Флаг</b></div><br />
 <div vdz=" tile dark round ">
-<img src="img2.svg" vdz=" bwhite round "></img><b style="position:relative;top:0.5em">Герб</b></div><br />
+<img src="img2.svg" vdz=" bwhite round " onclick="gal.open(1)"></img><b style="position:relative;top:0.5em">Герб</b></div><br />
 <div vdz=" tile dark round ">
-<img src="img3.jpg" vdz=" bwhite round "></img><b style="position:relative;top:0.5em">Монте-Титано</b></div><br />
+<img src="img3.jpg" vdz=" bwhite round " onclick="gal.open(2)"></img><b style="position:relative;top:0.5em">Монте-Титано</b></div><br />
 <div vdz=" tile dark round ">
-<img src="img4.jpg" vdz=" bwhite round "></img><b style="position:relative;top:0.5em">Башня Гуаита</b></div><br />
+<img src="img4.jpg" vdz=" bwhite round " onclick="gal.open(3)"></img><b style="position:relative;top:0.5em">Башня Гуаита</b></div><br />
 <div vdz=" tile dark round ">
-<img src="img5.jpg" vdz=" bwhite round "></img><b style="position:relative;top:0.5em">Башня Честа</b></div><br />
+<img src="img5.jpg" vdz=" bwhite round " onclick="gal.open(4)"></img><b style="position:relative;top:0.5em">Башня Честа</b></div><br />
 <div vdz=" tile dark round ">
-<img src="img6.jpg" vdz=" bwhite round "></img><b style="position:relative;top:0.5em">Башня Монтале</b></div><br />
+<img src="img6.jpg" vdz=" bwhite round " onclick="gal.open(5)"></img><b style="position:relative;top:0.5em">Башня Монтале</b></div><br />
+<div id="gal_cont" vdz=" dark "></div>
 </div></div>
 <div vdz=" hpadding fullheight hidden " id="tab3"><div vdz=" fullheight white padding ">
 <a name="map"><div id="mapwrap" vdz=" fullwidth fullheight "></div></a><!--button onclick='chcenter(0,0)'>qwe</button-->
@@ -43,9 +55,9 @@
 </label>
 <label vdz="quiz/a">
 <input type="radio" name="q1" value="a2" />Капитаны-регенты
-</label>
+	</label>
 </div>
-<div vdz="quiz/o">
+	<div vdz="quiz/o">
 <div vdz="quiz/q">
 Из какого количества депутатов состоит Большой Генеральный Совет?
 </div>
@@ -57,6 +69,7 @@
 <div vdz="quiz/q">
 Площадь каких кастелли больше 6км<sup>2</sup>?
 </div>
+
 <label vdz="quiz/a">
 <input type="checkbox" name="q3" value="a1" />Аккуавива
 </label>
@@ -73,11 +86,50 @@
 <input type="checkbox" name="q3" value="a5" />Фьорентино
 </label>
 </div>
+	<!--
+<div vdz="quiz/o">
+<div vdz="quiz/q">
+	
+Вопрос 2
+</div>
+<label vdz="quiz/a">
+<input type="radio" name="q2" value="a1" />Вариант1
+</label>
+<label vdz="quiz/a">
+<input type="radio" name="q2" value="a2" />Вариант2
+</label>
+<label vdz="quiz/a">
+<input type="radio" name="q2" value="a3" />Вариант3
+</label>
+</div>   
+<div vdz="quiz/o">
+<div vdz="quiz/q">
+Вопрос 3
+</div>
+<label vdz="quiz/a">
+<input type="checkbox" name="q3" value="a1" />Вариант1
+</label>
+<label vdz="quiz/a">
+<input type="checkbox" name="q3" value="a2" />Вариант2
+</label>
+<label vdz="quiz/a">
+<input type="checkbox" name="q3" value="a3" />Вариант3
+</label>
+</div>  -->
 <br />
 <div vdz=" bwrap "><input type="submit" value="Отправить" vdz=" button "></input></div>
 <div vdz=" bwrap "><input type="reset" value="Сброс" vdz=" reset "></input></div>
+
 </form>
+
+
 </div>
 </div></div>
+
+<div vdz="footer/root">
+<b vdz="footer/lih">Контакты</b>
+<a href="mailto:vftdan.feed@gmail.com" vdz="footer/lie">Почта</a>
+<a href="//telegram.me/vftdandev" vdz="footer/lie">Telegram</a>
+</div>
 </body>
 </html>
