@@ -192,7 +192,6 @@ border-left-width:1pt;
 width:calc(100%-2em);
 text-align:center;
 margin:1em;
-border:1pt solid red;
 }
 [vdz^="footer/"][vdz$="/lih"] {
 font-weight:bold;
