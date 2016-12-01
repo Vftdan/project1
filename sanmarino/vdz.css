@@ -189,9 +189,10 @@ border-left-width:1pt;
  display:none !important; 
 }
 [vdz^="footer/"][vdz$="/root"] {
-width:100%;
+width:calc(100%-2em);
 text-align:center;
 margin:1em;
+border:1pt solid red;
 }
 [vdz^="footer/"][vdz$="/lih"] {
 font-weight:bold;
@@ -253,12 +254,13 @@ width:79%;
 }
 
 [vdz^="gal/"][vdz$="/prev"],[vdz^="gal/"][vdz$="/next"]{
-display:block;
+display:table-cell;
 min-width:10%;
 height:100%;
 font-size:5em;
 text-align:center;
-line-height:418%;
+vertical-align:bottom;
+//line-height:418%;
 }
 [vdz^="gal/"][vdz$="/prev"]{
 float:left;
