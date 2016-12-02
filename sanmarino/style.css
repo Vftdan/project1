@@ -51,6 +51,8 @@ background-size:60%;
 	a[href]{
 		color:#797979;
 		transition:0.2s;
+	}
+	a[href^="javascript:"]{
 		cursor:help;
 	}
 	a[href]:hover{
