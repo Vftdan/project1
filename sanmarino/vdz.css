@@ -132,7 +132,8 @@ transition:0.5s;
 padding:1ex;
 padding-bottom:0px;
 display:inline-block;
-  vertical-align:top;
+vertical-align:top;
+font-family:"Slab Serif", monospace;
 //padding-right:0px;
 }
 [vdz^="quiz/"][vdz$="/q"]{
