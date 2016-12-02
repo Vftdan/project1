@@ -21,6 +21,7 @@ width:1.4em;
 display:inline-block;
 padding-top:3pt;
 transition:0.6s;
+cursor:url("Menu.cur");
 }
 @media (max-device-width: 12cm) {
 body {
