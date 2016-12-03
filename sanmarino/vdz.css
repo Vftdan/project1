@@ -132,8 +132,25 @@ transition:0.5s;
 padding:1ex;
 padding-bottom:0px;
 display:inline-block;
-  vertical-align:top;
+vertical-align:top;
+font-family:"Slab Serif", monospace;
 //padding-right:0px;
+}
+[vdz^="quiz/"][vdz$="/o"]>[vdz^="quiz/"][vdz$="/m"] {
+transition:0.5s;
+}
+[vdz^="quiz/"][vdz$="/o"]:not([vdz~="wrong"])>[vdz^="quiz/"][vdz$="/m"]{
+opacity:0;
+height:0em;
+font-size:0em;
+overflow:hidden;
+}
+[vdz^="quiz/"][vdz$="/o"][vdz~="wrong"]>[vdz^="quiz/"][vdz$="/m"] {
+opacity:1;
+display:block;
+color:red;
+height:auto;
+font-size:1em;
 }
 [vdz^="quiz/"][vdz$="/q"]{
 font-weight:bold;
