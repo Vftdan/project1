@@ -106,6 +106,7 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
                 };
                 b+=f;
                 if(!f) {VDZ.vdzSet(r[0].parentNode.parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode.parentNode).VDZrem("wrong")}; 
+                r[0].parentNode.parentNode.save();
                 
                     }else if(r[0].type=="checkbox"){
                             f=true;
@@ -114,11 +115,13 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
                 }
                             b+=f;
                             if(!f) {VDZ.vdzSet(r[0].parentNode.parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode.parentNode).VDZrem("wrong")};  
+                            r[0].parentNode.parentNode.save();
                     }else if(r[0].type=="text"){
                             a=r[0].value;
                             if(correct[i][1]&1) a*=1;
                             b+=(correct[i][0]==a);
                           if(correct[i][0]!=a) {VDZ.vdzSet(r[0].parentNode.parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode.parentNode).VDZrem("wrong")};  
+                          r[0].parentNode.parentNode.save();
                             continue;
                     }
             }
