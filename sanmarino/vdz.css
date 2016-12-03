@@ -137,14 +137,18 @@ font-family:"Slab Serif", monospace;
 //padding-right:0px;
 }
 [vdz^="quiz/"][vdz$="/o"]>[vdz^="quiz/"][vdz$="/m"] {
-display:none;
-height:0px;
+opacity:0;
+height:0em;
+font-size:0em;
+transition:0.5s;
+overflow:hidden;
 }
 [vdz^="quiz/"][vdz$="/o"][vdz~="wrong"]>[vdz^="quiz/"][vdz$="/m"] {
+opacity:1;
 display:block;
 color:red;
 height:auto;
-transition:height 1s;
+font-size:1em;
 }
 [vdz^="quiz/"][vdz$="/q"]{
 font-weight:bold;
