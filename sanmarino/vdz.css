@@ -136,6 +136,16 @@ vertical-align:top;
 font-family:"Slab Serif", monospace;
 //padding-right:0px;
 }
+[vdz^="quiz/"][vdz$="/o"]>[vdz^="quiz/"][vdz$="/m"] {
+display:none;
+height:0px;
+}
+[vdz^="quiz/"][vdz$="/o"][vdz~="wrong"]>[vdz^="quiz/"][vdz$="/m"] {
+display:block;
+color:red;
+height:auto;
+transition:height 1s;
+}
 [vdz^="quiz/"][vdz$="/q"]{
 font-weight:bold;
 letter-spacing:0.3ex;

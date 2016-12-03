@@ -94,24 +94,31 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
         var to;
         var correct = { q1: "a2", q2: [60,1], q3: ["a2","a4","a5"]/*, q4: [4,1]*/ };
         return function (e) {
-            e.preventDefault();
+  try{          e.preventDefault();
             var i, j, b = 0, r, f, a;
             for (i in correct) {
                 r = document.getElementsByName(i);
                     if(r[0].type=="radio"){
+                    f=0;
                 for (j = 0; j < r.length; j++) {
-                    b += (r[j].value == correct[i]) && (r[j].checked);
-                }
+                    f += (r[j].value == correct[i]) && (r[j].checked);
+                    
+                };
+                b+=f;
+                if(!f) {VDZ.vdzSet(r[0].parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode).VDZrem("wrong")}; 
+                
                     }else if(r[0].type=="checkbox"){
                             f=true;
                 for (j = 0; j < r.length; j++) {
                     f = f&&((correct[i].indexOf(r[j].value) == -1 ) ^ (r[j].checked));
                 }
                             b+=f;
+                            if(!f) {VDZ.vdzSet(r[0].parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode).VDZrem("wrong")};  
                     }else if(r[0].type=="text"){
                             a=r[0].value;
                             if(correct[i][1]&1) a*=1;
                             b+=(correct[i][0]==a);
+                          if(correct[i][0]!=a) {VDZ.vdzSet(r[0].parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode).VDZrem("wrong")};  
                             continue;
                     }
             }
@@ -119,6 +126,8 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
             onlyshow([], "message");
             document.getElementById("message").lastChild.innerHTML = "Правильных ответов: " + b;
             to=setTimeout(onlyshow.bind(window,["message"],""),10000)
+       
+       } catch(e){alert(e)};
         }
     })();
 	var openmap=function(N,E){document.getElementById("menutab3").onclick();chcenter(N,E)};
