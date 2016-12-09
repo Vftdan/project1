@@ -174,10 +174,10 @@ function click_sun(mask){
 var i;
 var a1=document.getElementsByClassName("sun_anim");
 var a2=document.getElementsByClassName("sun_fall");
-for(i in a1){
+for(i=0;i<a1.length;i++){
 a1[i].endElement();
 }
-for(i in a2){
+for(i=0;i<a2.length;i++){
 a1[i].beginElement();
 }
 mask.parentNode.removeChild(mask);
