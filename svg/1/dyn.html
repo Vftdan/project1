@@ -79,7 +79,8 @@
            attributeName="stop-opacity"
            values="0;0.3;0.3;0"
            dur="5s"
-           repeatCount="indefinite"
+   fill="freeze"
+   class="sun-anim"        repeatCount="indefinite"
 />
       </stop>
       <stop offset="50%" style="stop-color:rgb(0,0,0);stop-opacity:0.4" >
@@ -100,12 +101,15 @@
       <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0.9" />
     </linearGradient>
     <radialGradient id="rg1">
-      <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:0.4" />
+      <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:0.4"
+      
+       />
       
       <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:0" >
                   <animate 
            attributeName="stop-opacity"
-           values="0;0.3;0.3;0"
+          class="sun_anim"
+          fill="freeze" values="0;0.3;0.3;0"
            dur="5s"
            repeatCount="indefinite"
 />
@@ -176,7 +180,7 @@
 </rect>
 
 <g id="clickMasks">
-<circle cx='620' cy='100' r='80' opacity="0" onclick="click_sun(this)">
+<circle cx='620' cy='100' r='80' opacity="0" id="sunm">
 <animateTransform 
            attributeName="transform"
            type="rotate"
@@ -190,8 +194,10 @@
 
 </g>
 </svg>
-<script>
-
+<script defer>
+document.getElementById("sunm").onclick=function(e){
+if(e.offsetY<450)click_sun(e.currentTarget);
+}
 function click_sun(mask){
 var i;
 var a1=document.getElementsByClassName("sun_anim");
