@@ -14,20 +14,20 @@
 </polygon>
 
 <g>
-<circle cx='620' cy='100' r='50' fill="#ffff55" >
+<circle cx='620' cy='100' r='50' fill="#ffff55" id="sun" >
 <animateTransform 
            attributeName="transform"
            type="rotate"
            from="-30 500 306"
            to="330 500 306"
            dur="5s"
-           repeatCount="indefinite"
+          class="sun_anim" repeatCount="indefinite"
 />
 <animate 
            attributeName="fill"
            values="#ffff55;#ff1100;#ff1100;#ffff55"
            dur="5s"
-           repeatCount="indefinite"
+          class="sun_anim" repeatCount="indefinite"
 />
 
 </circle>
@@ -146,7 +146,7 @@
 
 
 
-<g id="cliclMasks">
+<g id="clickMasks">
 <circle cx='620' cy='100' r='50' opacity="0" onclick="click_sun(this)">
 <animateTransform 
            attributeName="transform"
@@ -163,6 +163,9 @@
 </svg>
 <script>
 function click_sun(mask){
-alert(mask)
+var i;
+var a1=document.getElementsByClassName("sun_anim");
+a1[0].endElement();
+a1[1].endElement();
 }
 </script>
