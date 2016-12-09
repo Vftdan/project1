@@ -21,6 +21,7 @@
            from="-30 500 306"
            to="330 500 306"
            dur="5s"
+           fill="freeze"
           class="sun_anim" repeatCount="indefinite"
 />
 <animate 
@@ -28,6 +29,12 @@
            values="#ffff55;#ff1100;#ff1100;#ffff55"
            dur="5s"
           class="sun_anim" repeatCount="indefinite"
+/>
+<animate 
+           attributeName="r"
+           values="100;1000"
+           dur="5s"
+          class="sun_fall" begin="indefinite"
 />
 
 </circle>
@@ -154,7 +161,7 @@
            from="-30 500 306"
            to="330 500 306"
            dur="5s"
-           repeatCount="indefinite"
+          class="sun_anim" repeatCount="indefinite"
 />
 
 </circle>
@@ -162,10 +169,17 @@
 </g>
 </svg>
 <script>
+
 function click_sun(mask){
 var i;
 var a1=document.getElementsByClassName("sun_anim");
-a1[0].endElement();
-a1[1].endElement();
+var a2=document.getElementsByClassName("sun_fall");
+for(i in a1){
+a1[i].endElement();
+}
+for(i in a2){
+a1[i].beginElement();
+}
+mask.parentNode.removeChild(mask);
 }
 </script>
