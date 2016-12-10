@@ -98,6 +98,13 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
   try{          e.preventDefault();
             var i, j, b = 0, r, f, a, scur, scor, txt=[];
             var addInfo=function(){
+            var i1;
+            for(i1 in scur){
+            scur[i1]=scur[i1].replace(/&/img,"&amp;").replace(/</img,"&lt;").replace(/>/img,"&gt;");
+            }
+            for(i1 in scor){
+            scor[i1]=scor[i1].toString().replace(/&/img,"&amp;").replace(/</img,"&lt;").replace(/>/img,"&gt;");
+            }
             if(!scur.length||scur[0]==""){scur=["<i>&lt;Нет ответа&gt;</i>"]};
             txt.push("Вопрос "+qnames[i]+": "+scur.join(", ")+(f?(" — верно."):(" — неверно. Верно: "+scor.join(", ")+".")));
             }
