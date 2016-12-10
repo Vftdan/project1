@@ -1,5 +1,4 @@
 @charset "UTF-8";
-//@import url('font.css');
 body {
 font-size:0.7cm;
 }
@@ -72,6 +71,3 @@ background-image:url("prelr.svg");
 background-size:2em;
 }
 }
-/*[vdz^="quiz/"] {
-font-family:Nimbus, monospace
-}*/
