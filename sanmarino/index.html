@@ -16,7 +16,7 @@ id="icon" />
 <title>Сан-Марино</title>
 </head>
 <body>
-<div id="loading" vdz=" overlay "><noscript><h1><center style="color:red">Для работы сайта необходим JavaScript</center></h1></noscript></div>
+<div id="loading" vdz=" overlay hidden "><noscript><h1><center style="color:red">Для работы сайта необходим JavaScript</center></h1></noscript></div>
 <div vdz=" win outset white round hidden " id="message" style="right:1em;top:1em">
 <div vdz="win/bar"><div vdz="win/close" onclick='onlyshow(["message"],"")'>X</div></div>
 <div></div></div>
@@ -28,17 +28,17 @@ id="icon" />
 
 <div vdz=" hpadding fullheight hidden " id="tab2"><div vdz=" fullheight white padding ">
 <h1>Нажмите на катинку, чтобы открыть</h1>
-<div vdz=" tile dark round ">
+<div vdz=" tile bordered round ">
 <img src="img1.svg" vdz=" bwhite round " onclick="gal.open(0)"></img><b style="position:relative;top:0.5em">Флаг</b></div><br />
-<div vdz=" tile dark round ">
+<div vdz=" tile bordered round ">
 <img src="img2.svg" vdz=" bwhite round " onclick="gal.open(1)"></img><b style="position:relative;top:0.5em">Герб</b></div><br />
-<div vdz=" tile dark round ">
+<div vdz=" tile bordered round ">
 <img src="img3.jpg" vdz=" bwhite round " onclick="gal.open(2)"></img><b style="position:relative;top:0.5em">Монте-Титано</b></div><br />
-<div vdz=" tile dark round ">
+<div vdz=" tile bordered round ">
 <img src="img4.jpg" vdz=" bwhite round " onclick="gal.open(3)"></img><b style="position:relative;top:0.5em">Башня Гуаита</b></div><br />
-<div vdz=" tile dark round ">
+<div vdz=" tile bordered round ">
 <img src="img5.jpg" vdz=" bwhite round " onclick="gal.open(4)"></img><b style="position:relative;top:0.5em">Башня Честа</b></div><br />
-<div vdz=" tile dark round ">
+<div vdz=" tile bordered round ">
 <img src="img6.jpg" vdz=" bwhite round " onclick="gal.open(5)"></img><b style="position:relative;top:0.5em">Башня Монтале</b></div><br />
 <div id="gal_cont" vdz=" dark "></div>
 </div></div>
@@ -51,9 +51,10 @@ id="icon" />
 <div vdz="quiz/q">
 Кто является главой государства в Сан-Марино?
 </div>
-<div vdz="quiz/m">
-Ответ неверный!
-</div>
+<!--div vdz="quiz/m">
+Ответ неверный!<br />
+Правильный ответ: Капитаны-регенты.
+</div-->
 <label vdz="quiz/a">
 <input type="radio" name="q1" value="a1" />Президент
 </label>
@@ -65,9 +66,10 @@ id="icon" />
 <div vdz="quiz/q">
 Из какого количества депутатов состоит Большой Генеральный Совет?
 </div>
-<div vdz="quiz/m">
-Ответ неверный!
-</div>
+<!--div vdz="quiz/m">
+Ответ неверный!<br />
+Правильный ответ: 60.
+</div-->
 <label vdz="quiz/a">
 Из <input type="text" name="q2" style="width:2.5em" />
 </label>
@@ -76,9 +78,10 @@ id="icon" />
 <div vdz="quiz/q">
 Площадь каких кастелли больше 6 км<sup>2</sup>?
 </div>
-<div vdz="quiz/m">
-Ответ неверный!
-</div>
+<!--div vdz="quiz/m">
+Ответ неверный!<br />
+Правильный ответ: Доманьяно, Серравалле, Фьорентино.
+</div-->
 <label vdz="quiz/a">
 <input type="checkbox" name="q3" value="a1" />Аккуавива
 </label>

@@ -284,4 +284,6 @@ float:left;
 [vdz^="gal/"][vdz$="/next"]{
 float:right;
 }
-
+[vdz~="bordered"]{
+border:1pt solid #aaaaaa;
+}

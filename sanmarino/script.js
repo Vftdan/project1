@@ -93,41 +93,64 @@ window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
  var checkanswers = (function () {
         var to;
         var correct = { q1: "a2", q2: [60,1], q3: ["a2","a4","a5"]/*, q4: [4,1]*/ };
+        var qnames = { q1: 1, q2: 2, q3: 3 };
         return function (e) {
   try{          e.preventDefault();
-            var i, j, b = 0, r, f, a;
+            var i, j, b = 0, r, f, a, scur, scor, txt=[];
+            var addInfo=function(){
+            var i1;
+            for(i1 in scur){
+            scur[i1]=scur[i1].replace(/&/img,"&amp;").replace(/</img,"&lt;").replace(/>/img,"&gt;");
+            }
+            for(i1 in scor){
+            scor[i1]=scor[i1].toString().replace(/&/img,"&amp;").replace(/</img,"&lt;").replace(/>/img,"&gt;");
+            }
+            if(!scur.length||scur[0]==""){scur=["<i>&lt;Нет ответа&gt;</i>"]};
+            txt.push("Вопрос "+qnames[i]+": "+scur.join(", ")+(f?(" — верно."):(" — неверно. Верно: "+scor.join(", ")+".")));
+            }
             for (i in correct) {
                 r = document.getElementsByName(i);
-                    if(r[0].type=="radio"){
+              scur=[]; 
+              scor=[];     if(r[0].type=="radio"){
                     f=0;
                 for (j = 0; j < r.length; j++) {
                     f += (r[j].value == correct[i]) && (r[j].checked);
+                    if(r[j].checked){scur.push(r[j].parentNode.textContent.trim())};
+if(r[j].value == correct[i]){scor.push(r[j].parentNode.textContent.trim())};
                     
                 };
                 b+=f;
                 if(!f) {VDZ.vdzSet(r[0].parentNode.parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode.parentNode).VDZrem("wrong")}; 
                 r[0].parentNode.parentNode.save();
                 
+ addInfo();             
                     }else if(r[0].type=="checkbox"){
                             f=true;
                 for (j = 0; j < r.length; j++) {
                     f = f&&((correct[i].indexOf(r[j].value) == -1 ) ^ (r[j].checked));
+                    
+                    if(r[j].checked){scur.push(r[j].parentNode.textContent.trim())};
+if(correct[i].indexOf(r[j].value)!=-1){scor.push(r[j].parentNode.textContent.trim())};
                 }
                             b+=f;
                             if(!f) {VDZ.vdzSet(r[0].parentNode.parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode.parentNode).VDZrem("wrong")};  
                             r[0].parentNode.parentNode.save();
+                            addInfo();
                     }else if(r[0].type=="text"){
                             a=r[0].value;
                             if(correct[i][1]&1) a*=1;
                             b+=(correct[i][0]==a);
-                          if(correct[i][0]!=a) {VDZ.vdzSet(r[0].parentNode.parentNode).VDZadd("wrong")} else {VDZ.vdzSet(r[0].parentNode.parentNode).VDZrem("wrong")};  
+                            scor=[correct[i][0]];
+                            scur=[r[0].value];
+                          if(correct[i][0]!=a) {f=0;VDZ.vdzSet(r[0].parentNode.parentNode).VDZadd("wrong")} else {f=1;VDZ.vdzSet(r[0].parentNode.parentNode).VDZrem("wrong")};  
                           r[0].parentNode.parentNode.save();
+                          addInfo();
                             continue;
                     }
             }
             if(to){clearTimeout(to)};
             onlyshow([], "message");
-            document.getElementById("message").lastChild.innerHTML = "Правильных ответов: " + b;
+            document.getElementById("message").lastChild.innerHTML = "Правильных ответов: " + b + "<br />" + txt.join("<br />");
             to=setTimeout(onlyshow.bind(window,["message"],""),10000)
        
        } catch(e){alert(e)};
