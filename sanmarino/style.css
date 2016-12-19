@@ -71,3 +71,9 @@ background-image:url("prelr.svg");
 background-size:2em;
 }
 }
+#tab2 [vdz~="tile"]{
+width:7cm;
+}
+#tab2>*{
+text-align:center;
+}
