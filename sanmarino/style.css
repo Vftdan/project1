@@ -82,3 +82,6 @@ text-align:center;
 display:inline-block;
 margin-left:1em;
 }
+#tab1 p:not(:first-child){
+margin-top:1ex;
+}
