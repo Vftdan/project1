@@ -73,6 +73,7 @@ background-size:2em;
 }
 #tab2 [vdz~="tile"]{
 width:7cm;
+margin:1ex;
 }
 #tab2>*{
 text-align:center;
