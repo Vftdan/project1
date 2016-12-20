@@ -29,6 +29,7 @@ background:rgba(0,0,0,0.6);
 }
 [vdz~="tile"] {
 display:inline-block;
+vertical-align:middle;
 }
 [vdz~="bwrap"]{
 vertical-align:top;
