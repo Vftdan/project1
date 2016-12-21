@@ -1,12 +1,24 @@
 @charset "UTF-8";
-*{
+*:not([novdz]){
   margin:0px;
   padding:0px;
 }
-body{
+body:not([novdz]){
   font-family:Helvetica,sans-serif;
   background:rgba(0,0,0,0.08);
 }
+
+	a[href]:not([novdz]){
+		color:#797979;
+		transition:0.2s;
+	}
+	
+	a[href]:hover:not([novdz]){
+		color:#dcdcdc;
+	}
+	a[href]:active:not([novdz]){
+		color:#353535;
+	}
 [vdz~="overlay"]{
 position:fixed;
 top:0px;
