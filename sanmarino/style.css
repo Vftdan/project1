@@ -52,6 +52,7 @@ background-position:center;
 background-repeat:no-repeat;
 background-size:60%;
 }
+/*
 	a[href]{
 		color:#797979;
 		transition:0.2s;
@@ -64,10 +65,27 @@ background-size:60%;
 	}
 	a[href]:active{
 		color:#353535;
-	}
+	}*/
 @media (orientation:portrait) {
 #loading{
 background-image:url("prelr.svg");
 background-size:2em;
 }
+}
+#tab2 [vdz~="tile"]{
+max-width:7cm;
+margin:1ex;
+}
+#tab2>*{
+text-align:center;
+}
+#tab1 p:first-letter{
+display:inline-block;
+margin-left:1em;
+}
+#tab1 p:not(:first-child){
+margin-top:1ex;
+}
+iframe {
+border:none;
 }

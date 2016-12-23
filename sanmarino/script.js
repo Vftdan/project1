@@ -87,13 +87,13 @@ if(!e.load)VDZ.vdzSet(e);
 e.choose();
 e.save();
 }
-window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
+/*window.addEventListener("load",function(){onlyshow(["loading"],"")},false);*/
 /////////////////////////////////////////////////////
 
  var checkanswers = (function () {
         var to;
-        var correct = { q1: "a2", q2: [60,1], q3: ["a2","a4","a5"]/*, q4: [4,1]*/ };
-        var qnames = { q1: 1, q2: 2, q3: 3 };
+        var correct = { q1: "a2", q2: [60,1], q3: ["a2","a4","a5"], q4: "a2", q5: [3,1] };
+        var qnames = { q1: 1, q2: 2, q3: 3, q4: 4, q5: 5 };
         return function (e) {
   try{          e.preventDefault();
             var i, j, b = 0, r, f, a, scur, scor, txt=[];
