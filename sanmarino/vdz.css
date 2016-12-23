@@ -170,7 +170,7 @@ font-size:1em;
 }
 [vdz^="quiz/"][vdz$="/q"]{
 font-weight:bold;
-letter-spacing:0.3ex;
+letter-spacing:0.1ex;
 }
 [vdz^="quiz/"][vdz$="/a"]{
 //margin-left:1em;
