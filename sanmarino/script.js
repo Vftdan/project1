@@ -87,7 +87,7 @@ if(!e.load)VDZ.vdzSet(e);
 e.choose();
 e.save();
 }
-window.addEventListener("load",function(){onlyshow(["loading"],"")},false);
+/*window.addEventListener("load",function(){onlyshow(["loading"],"")},false);*/
 /////////////////////////////////////////////////////
 
  var checkanswers = (function () {
