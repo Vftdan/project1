@@ -52,7 +52,6 @@ background-position:center;
 background-repeat:no-repeat;
 background-size:60%;
 }
-/*
 	a[href]{
 		color:#797979;
 		transition:0.2s;
@@ -65,7 +64,7 @@ background-size:60%;
 	}
 	a[href]:active{
 		color:#353535;
-	}*/
+	}
 @media (orientation:portrait) {
 #loading{
 background-image:url("prelr.svg");
@@ -88,4 +87,7 @@ margin-top:1ex;
 }
 iframe {
 border:none;
+}
+[vdz^="quiz/"] {
+font-family:Nimbus;
 }
