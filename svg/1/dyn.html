@@ -81,7 +81,7 @@
            values="0;0.3;0.3;0"
            dur="5s"
    fill="freeze"
-   class="sun-anim"        repeatCount="indefinite"
+   class="sun_anim"        repeatCount="indefinite"
 />
       </stop>
       <stop offset="50%" style="stop-color:rgb(0,0,0);stop-opacity:0.4" >
@@ -118,7 +118,17 @@
     </radialGradient>
 <mask id="fire1m">
 <linearGradient id="fire1m1lg" x1="0%" y1="100%" x2="0%" y2="0%">
-	  <stop id="fire1m1lg_top" offset="30%" style="stop-color:black;stop-opacity:1" />
+	  <stop id="fire1m1lg_top" offset="30%" style="stop-color:black;stop-opacity:1">
+	            <animate 
+           attributeName="stop-color"
+           from="black"
+           to="white"
+           dur="3s"
+   fill="freeze"
+   class="sun_fall"
+     begin="indefinite"
+/>
+	  </stop>
 	  <stop offset="100%" style="stop-color:black;stop-opacity:1" />
 </linearGradient>
 <path d="M .5 0 a .25 .5 0 0 0 0 1 a .125 .25 0 0 1 0 .5 a .5 .5 0 0 0 .35 -.85 a .5 .5 0 0 10 -.65 Z" fill="url(#fire1m1lg)" >
@@ -207,12 +217,29 @@
 <g transform="translate(100,600) scale(1,-1)" --tree-->
 <path d="M0 0 l 30 30 10 20 10 300 60 0 10 -300 10 -20 30 -30 a 80 10 0 0 0 -160 0 Z" fill="#553300" />
 <path d="M0 0 l 30 30 10 20 10 300 60 0 10 -300 10 -20 30 -30 a 80 10 0 0 0 -160 0 Z" fill="url(#lg2)" />
-
+<path d="M0 0 l 30 -30 10 -20 10 -300 60 0 10 300 10 20 30 30 Z" fill="rgba(0,0,0,0.2)">
+<animate attributeName="opacity" values="1; 0; 0; 0; 0; 0; 0; 1" dur="5s" begin="0s" fill="freeze" class="sun_anim" repeatCount="indefinite" /><!--animateTransform attributeName="transform" type="scale" values="1 1; 1 1; 0 0; 0 0" dur="5s" fill="freeze" class="sun_anim" repeatCount="indefinite"></animateTransform--><animateTransform attributeName="transform" type="skewX" values="0; 35; 70; 35; 0; 0; -35; -70; -35; 0" dur="5s" fill="freeze" begin="0s" class="sun_anim" repeatCount="indefinite"></animateTransform>
+</path>
 
 <circle cx="80" cy="350" r="100" fill="#00ee00">
 </circle>
 <circle cx="80" cy="350" r="100" fill="url(#rg1)">
 </circle>
+<!--Fire G-->
+<g transform="translate(-70, 50) scale(300,300)">
+<polygon points="0 0 1.25 0 1.25 1.5 0 1.5" fill="red" mask="url(#fire1m)">
+<animateTransform attributeName="transform" type="skewX" values="-10; 10; -10" dur="3s" fill="freeze" begin=".7s" repeatCount="indefinite"></animateTransform>
+<animateTransform attributeName="transform" type="scale" values="1 1; 1 .8; 1 1" dur="5s" fill="freeze" begin=".7s" repeatCount="indefinite"></animateTransform>
+</polygon>
+<g transform="translate(.3,0) scale(.4,.4)">
+<polygon points="0 0 1.25 0 1.25 1.5 0 1.5" fill="yellow" mask="url(#fire1m)">
+<animateTransform attributeName="transform" type="skewX" values="10; -10; 10" dur="3s" fill="freeze" begin=".7s" repeatCount="indefinite"></animateTransform>
+<animateTransform attributeName="transform" type="scale" values="1 .8; 1 1; 1 .8" dur="5s" fill="freeze" begin=".7s" repeatCount="indefinite"></animateTransform>
+</polygon>
+</g>
+</g>
+<!--/Fire G-->
+
 </g>
 <g transform="translate(634,753)">
 <path d="M 0 0 v 223.625 a 111.75 89.5 0 0 0 223.625 0 v -223.625 Z" fill="rgba(0,0,0,0.2)">
@@ -292,6 +319,6 @@ for(i=0;i<a2.length;i++){
 a2[i].beginElement();
 }
 mask.parentNode.removeChild(mask);
-document.getElementById("fire1m1lg_top").style.stopColor="white";
+//document.getElementById("fire1m1lg_top").style.stopColor="white";
 }
 </script>
