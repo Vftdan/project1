@@ -134,6 +134,7 @@ font-size:0.5em;
 float:right;
 text-align:center;
   overflow:hidden;
+user-select:none;
 }
 [vdz^="win/"][vdz$="/close"]{
 color:#aa5555;
